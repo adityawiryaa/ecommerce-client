@@ -1,0 +1,26 @@
+
+<body class="p-3">
+    <h3 class="text-center text-uppercase">Order history</h3>
+    <div class="container bg-secondary mt-3 mb-3"*ngFor="let data of data$ | async" data-aos="fade-up" data-aos-duration="1500">
+  <div class="row p-3 " >
+    <div class="col-md-1">
+      <i
+        class="fa fa-user-circle-o fa-5x rounded-circle"
+        aria-hidden="true"
+      ></i>
+    </div>
+    <div class="col-md-11">
+      <div >
+        <div class="col-md-12">
+          <span><strong>Order ID : {{data._id}}</strong></span
+          ><br />
+          Total : ${{data.total}} <br />
+        </div>
+        <div class="col-md-12 text-capitalize">
+          Order Made On : {{data.history}} by {{data.user.name}} 
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</body>

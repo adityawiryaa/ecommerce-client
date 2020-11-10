@@ -1,0 +1,31 @@
+*{
+    text-decoration: none;
+}
+body{
+    padding: 0;
+    font-family: 'Lato',sans-serif;
+    color: #fff;
+}
+footer{
+    background-color: #00838f !important
+}
+.mediaStyle {
+    padding: 20px 0px;
+    text-align: center;
+}
+.ownStyle {
+    background-color:rgba(0,0,0,0.2);
+    padding: 15px 0;
+}
+.ownStyle p {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+a {
+    color: #fff;
+}
+a:hover{
+    color: #3498db;
+    transition: all ease-in-out 450ms;
+}

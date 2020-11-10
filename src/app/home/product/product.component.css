@@ -1,0 +1,39 @@
+.btn {
+    border: 1px solid greenyellow;
+    margin: 0 5px;
+    transition: ease-in 0.5s;
+}
+.btn:hover{
+    background-color: #28df99;
+    color: #fff;
+}
+.zoomPicture {
+    overflow: hidden;
+    cursor: pointer;
+}
+.zoomPicture img {
+    transition: all 1.5s ease;
+}
+.zoomPicture:hover img {
+    transform: scale(1.5);
+}
+
+.headingStyle {
+    background: #0062cc;
+    color: #fff;
+    width: 200px;
+    font-size: 24px;
+    padding: 5px;
+    height: 40px;
+}
+.headingStyle::after {
+    content: '';
+    border-top: 40px solid #0062cc;
+    border-right: 40px solid transparent;
+    position: relative;
+    left: 25px;
+    top: 34.2px;
+}
+h5 {
+    font-size: 14px;
+}

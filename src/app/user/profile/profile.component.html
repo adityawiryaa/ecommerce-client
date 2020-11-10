@@ -1,0 +1,159 @@
+<body data-aos="fade-up" data-aos-duration="1500" >
+  <section class="container">
+    <div class="row">
+      <div class=" col-md-10 mx-auto">
+        <div class="card cardProfile flex-row my-5 shadow" data-aos="fade-up" data-aos-duration="1500" >
+          <div class="col-md-12">
+            <div class="p-3 py-5">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <div class="d-flex flex-row align-items-center">
+                  <i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+                  <a routerLink="/profile/detail" class="text-dark"><h6>Back to Profile</h6></a>
+                </div>
+                <h6 class="text-right">Edit Profile</h6>
+              </div>
+              <div class="text-center"> User</div>
+              <form [formGroup]="profileForm">
+                <div class="row mt-3 form-group">
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name"
+                      formControlName="name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Address"
+                      formControlName="address"
+                    />
+                  </div>
+                </div>
+                <div class="row mt-2 form-group">
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      minlength="6"
+                      maxlength="20"
+                      formControlName="password"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Age"
+                      formControlName="age"
+                    />
+                  </div>
+                </div>
+                <div class="row mt-3 form-group">
+                  <div class="col-md-6 mb-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First Name"
+                      formControlName="firstname"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last Name"
+                      formControlName="lastname"
+                    />
+                  </div>
+                </div>
+              <div class="mt-5 text-right">
+              </div>
+              <div class="text-center"> Adress </div>
+            <form [formGroup]="createAdress" (ngSubmit)="createAdressUser()">
+              <div class="row mt-3 form-group">
+                <div class="col-md-6 mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Country"
+                    formControlName="country"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Province"
+                    formControlName="province"
+                  />
+                </div>
+              </div>
+              <div class="row mt-2 form-group">
+                <div class="col-md-6 mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="City"
+                    formControlName="city"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="District"
+                    formControlName="district"
+                  />
+                </div>
+              </div>
+              <div class="row mt-3 form-group">
+                <div class="col-md-6 mb-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Village"
+                    formControlName="village"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Phone"
+                    formControlName="phone"
+                  />
+                  <small class="invalid-feedback">
+                    Must be 6-20 characters long.
+                  </small>
+                </div>
+              </div>
+              <div class="row mt-3 form-group">
+                <div class="col-md-6 mb-2">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Zip"
+                    formControlName="zip"
+                  />
+                </div>
+              </div>
+            <div class="mt-5 text-right">
+              <button class="btn btn-primary profile-button" type="submit" (click)="updateUser()">
+                Update Profile
+              </button>
+            </div>
+          </form>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

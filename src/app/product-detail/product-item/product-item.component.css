@@ -1,0 +1,21 @@
+body{
+  background: scroll center url('../../../assets/images/background/nature3.jpg');
+  background-size: cover;
+}
+.zoomImage {
+    overflow: hidden;
+    cursor: pointer;
+}
+.zoomImage img {
+    transition: all 1.5s ease;
+}
+
+.zoomImage:hover img {
+    transform: scale(1.5);
+}
+.description{
+    font-size: 15px;
+}
+table{
+    font-size: 15px;
+}

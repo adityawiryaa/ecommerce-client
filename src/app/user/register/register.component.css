@@ -1,0 +1,55 @@
+*{
+    font-family: 'Lato',sans-serif;
+    letter-spacing: 0.5px;
+}
+body {
+  background: scroll center url('../../../assets/images/background/nature.jpg');
+  background-size: cover;
+  }
+  .card-signup {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 #ff512f;
+    overflow: hidden;
+  }
+  
+  .card-signup .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  .card-img-left {
+    width: 30%;
+    background:url('../../../assets/images/background/nature.jpg');
+    background-size: cover;
+  }
+  
+  .card-signup .card-body {
+    padding: 2rem;
+  }
+  .form-signup {
+    width: 100%;
+  }
+  
+  .form-signup .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label-group input {
+    height: auto;
+    border-radius: 2rem;
+  }
+  a {
+    cursor : pointer;
+  }

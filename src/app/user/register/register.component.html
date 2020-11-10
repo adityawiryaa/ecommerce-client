@@ -1,0 +1,62 @@
+<body  data-aos="fade-up" data-aos-duration="1500" >
+  <section class="container">
+    <div class="row">
+      <div class="col-md-10 mx-auto"  data-aos="fade-up" data-aos-duration="1500" >
+        <div class="card card-signup flex-row my-5">
+          <div class="card-img-left d-none d-md-flex"></div>
+          <div class="card-body">
+            <h5 class="card-title text-center">Register</h5>
+            <form [formGroup]="signUpForm" (ngSubmit)="signUp()" class="form-signup was-validated">
+              <div class="form-label-group">
+                <input type="text" class="form-control" placeholder="Name" 
+                  formControlName="name"required
+                />
+            <small class="invalid-feedback">Name Required.</small>
+              </div>
+              <div class="form-label-group">
+                <input
+                  type="email"
+                  id="inputEmail"
+                  class="form-control"
+                  placeholder="Email address"
+                  formControlName="email"
+                  required
+                />
+            <small class="invalid-feedback">Please fill a valid Email.</small>
+              </div>
+              <div class="form-label-group">
+                <input
+                  type="password"
+                  id="inputPassword"
+                  class="form-control"
+                  placeholder="Password"
+                  minlength="6"
+                  maxLength="20"
+                  formControlName="password"
+                  required
+                />
+                <small class="invalid-feedback">
+                  Must be 6-20 characters long.
+                </small>
+              </div>
+              <hr />
+              <button
+                class="btn btn-lg btn-primary btn-block text-uppercase"
+                type="submit"
+              >
+                Register
+              </button>
+              <hr>
+              <div class="mx-5 pt-3 mb-1">
+                <p class="grey-text d-flex justify-content-end">
+                  Already Have an Account ?
+                  <a data-toggle="modal"data-target="#modalLoginForm"class="blue-text ml-1">Sign In</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

@@ -1,0 +1,29 @@
+
+body {
+  background: scroll center url('../../../assets/images/background/nature2.jpg');
+  background-size: cover;
+}
+.cardProfile {
+    border: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.styleProfile {
+  background: scroll center url('../../../assets/images/background/nature2.jpg');
+  background-size: cover;
+  color: #fff;
+  font-family: 'Lato',sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+input {
+    border-radius: 2rem;
+}
+.bio-row {
+  width: 100%;
+  float: left;
+}
+.bio-row p span {
+  width: 100px;
+  display: inline-block;
+}

@@ -1,0 +1,39 @@
+body {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.menuPage {
+  text-align: center;
+  background-color: #00838f !important;
+}
+li.navbar {
+  position: none;
+  display: inline;
+}
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px 15px;
+  margin: 10px 5px;
+  font-size: 14px;
+}
+
+.buttonStyle {
+  color: #fff;
+  text-transform: uppercase;
+}
+.buttonStyle:hover {
+  color: #fff;
+  background: #3498db;
+  transition: ease-in-out 0.5s;
+}
+.signStyle {
+  border: 1px solid #3498db;
+}
+.sum {
+  position: none;
+  display: inline;
+}

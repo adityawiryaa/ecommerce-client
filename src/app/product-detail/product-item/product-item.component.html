@@ -1,0 +1,43 @@
+<body  data-aos="fade-up" data-aos-duration="1500" >
+<section class="container">
+    <div class="row" data-aos="fade-up" data-aos-duration="1500" >
+        
+      <div class=" col-md-8 mx-auto">
+        <div class="card shadow flex-md-row my-5 p-4 styleProduct">
+      <div class="col-md-6 mb-4 mb-md-0">
+          <div class="row mx-1">
+            <div class="col-md-12 mb-0 zoomImage">
+                  <img src="{{this.imagePath + this.data.image}}"
+                    class="img-fluid rounded">
+            </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <h5 class="text-uppercase" >{{this.data.name}}</h5>
+        <p class="text-muted text-uppercase small">{{this.data.category.namecategory}}</p>
+        <p><span class="mr-1"><strong>${{this.data.price}}</strong></span></p>
+        <p class="description">{{this.data.description}}</p>
+        <div class="table-responsive">
+          <table class="table table-sm table-borderless mb-0">
+            <tbody>
+              <tr>
+                <th class="pl-0 w-25" scope="row"><strong>Model</strong></th>
+                <td class="text-uppercase">{{this.data.name}}</td>
+              </tr>
+              <tr>
+                <th class="pl-0 w-25" scope="row"><strong>Color</strong></th>
+                <td>{{this.data.color}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr>
+        <button type="button" class="btn btn-primary btn-md mr-1 mb-2"  (click)="addCart(this.data._id) "routerLink="/cart">Buy now</button>
+        <button type="button" class="btn btn-success btn-md mr-1 mb-2" (click)="addCart(this.data._id)"><i class="fa fa-shopping-cart pr-2"></i>Add to cart</button>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+  </section>
+</body>

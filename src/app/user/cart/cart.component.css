@@ -1,0 +1,54 @@
+table {
+    border-collapse: collapse;
+}
+.cartPage {
+    margin: 30px auto;
+}
+img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+.productCart {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+    background: #FFFF66	;
+}
+td {
+    padding: 10px 5px;
+}
+td p {
+    margin: 0;
+}
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td button {
+    font-size: 12px;
+    padding: 2px;
+}
+.totalPrice {
+    display: flex;
+    justify-content: flex-end;
+}
+.totalPrice table {
+    border-top: 3px solid #FFFF66	;
+    border-bottom: 3px solid #FFFF66	;
+    width: 100%;
+    max-width: 350px;
+}
+h5 {
+    font-size: 14px;
+}

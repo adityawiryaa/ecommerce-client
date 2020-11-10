@@ -1,0 +1,37 @@
+<section class="container cartPage" data-aos="fade-up" data-aos-duration="1500" *ngIf="product$ | async as product">
+    <table class="mb-3 col-md-12">
+        <tr>
+            <th>Name Product</th>
+            <th>Quantity</th>
+            <th class="text-right">Subtotal</th>
+        </tr>
+        <tr *ngFor="let item of product; ">
+            <td>
+                <div class="productCart">
+                    <img src="{{imagePath +  item.product.image}}">
+                    <div>
+                        <h5 class="text-uppercase">{{item.product.name}}</h5>
+                        <p>${{item.product.price}}</p>
+                        <button (click)="deleteCart(item._id)" class="btn btn-danger mt-2">Remove</button>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <i class="btn btn-primary fa fa-minus-circle" aria-hidden="true" (click)="deleteQuantityOrder(item.product._id)"></i>
+                <input type="text" value={{item.quantity}} readonly>
+                <i class=" btn btn-primary fa fa-plus-circle" aria-hidden="true" (click)="addQuantityOrder(item.product._id)"></i></td>
+            <td class="text-right">${{item.product.price * item.quantity}}</td>
+        </tr>
+    </table>
+    <div class="totalPrice">
+        <table>
+            <tr>
+                <td>Total</td>
+                <td class="text-right">${{this.total}}</td>
+            </tr>
+        </table>
+    </div>
+        <div class="row col-md-12 text-right">
+            <button class="ml-auto btn-success mt-3" (click)="checkout(product)">Checkout</button>
+        </div>
+</section>

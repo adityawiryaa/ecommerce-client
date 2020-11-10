@@ -1,0 +1,30 @@
+<body class="container mb-4 mt-4"  > 
+    <h2 class="font-weight-bold mb-4 headingStyle">From the Shop</h2>
+<div class="row" *ngIf="product$ | async as product" >
+    <div *ngFor="let item of product | slice: firstIndex : lastIndex ; "data-aos="fade-left" data-aos-duration="1500" class="col-md-4 mb-4">
+        <div  class="card rounded shadow">
+            <div  class="card-body p-4">
+                <div class="zoomPicture  mb-3">
+                   <img src="{{imagePath +  item.image}}" alt="{{item.name}}" class=" mx-auto card-img-top img-fluid">
+                </div>
+                <h5> <a [routerLink]="['/product/' + item._id]" class="text-dark text-uppercase">{{item.name}}</a></h5>
+                <p class="small text-muted font-italic">{{item.preview}}</p>
+                    <div>
+                        <h5>${{item.price}}</h5>
+                    </div>
+                    <div class="text-right">
+                       <button class="btn" [routerLink]="['/product/' + item._id]" >Detail</button>
+                       <button class="btn cartStyle" (click)="addCart(item)"><i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <nav class="ml-3 col-md-12 ">
+       <ul class="pagination justify-content-center">
+         <li *ngFor="let i of arrProduct(product.length); let in = index;" class="page-item">
+             <a class="page-link btn " (click)="paginationIndex(in)" >{{in + 1}}</a>
+           </li>
+       </ul>
+     </nav>
+   </div>
+</body>
