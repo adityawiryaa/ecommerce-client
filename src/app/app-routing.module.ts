@@ -12,7 +12,7 @@ const routes: Routes = [
     path : 'category/:_id', component: CategoryComponent
   },
   {
-    path: 'home',
+    path: '/home',
     component: HomeComponent,
     loadChildren: () => import('./home/home.module').then((route) => route.HomeModule),
   },
@@ -20,7 +20,7 @@ const routes: Routes = [
     path: 'detail',
     loadChildren: () => import('./product-detail/product-detail.module').then((route) => route.ProductDetailModule)
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
