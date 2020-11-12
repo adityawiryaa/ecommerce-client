@@ -53,8 +53,8 @@ export class CartService {
 
   handleError(error: HttpErrorResponse) {
     let message = '';
-    
-    if (error.error instanceof ErrorEvent) message = error.error.message; 
+
+    if (error.error instanceof ErrorEvent) message = error.error.message;
     else message = `Error code : ${error.status} \n Message Error : ${error.message}`
     return throwError(message);
   }
