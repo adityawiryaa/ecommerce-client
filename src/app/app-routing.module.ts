@@ -12,7 +12,7 @@ const routes: Routes = [
     path : 'category/:_id', component: CategoryComponent
   },
   {
-    path: '/home',
+    path: 'home',
     component: HomeComponent,
     loadChildren: () => import('./home/home.module').then((route) => route.HomeModule),
   },
