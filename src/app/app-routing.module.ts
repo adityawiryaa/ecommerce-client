@@ -20,7 +20,7 @@ const routes: Routes = [
     path: 'detail',
     loadChildren: () => import('./product-detail/product-detail.module').then((route) => route.ProductDetailModule)
   },
-  { path: 'home', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
