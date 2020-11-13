@@ -30,7 +30,7 @@ export class CartComponent implements OnInit {
       }
     });
     this.product$ = this.cartService.getCart()
-    this.imagePath = 'http://localhost:3000/';
+    this.imagePath = 'https://backends-adit.herokuapp.com/';
   }
   deleteCart(id) {
     Swal.fire({

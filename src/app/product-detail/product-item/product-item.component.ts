@@ -21,7 +21,7 @@ export class ProductItemComponent implements OnInit {
   }
   getDetailProduct(){
     this.productService.getDetailProduct(this.id).subscribe(data => {
-    this.imagePath = 'http://localhost:3000/'
+    this.imagePath = 'https://backends-adit.herokuapp.com/'
       this.data = data.product
     })
   }

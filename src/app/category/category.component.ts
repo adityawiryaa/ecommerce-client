@@ -11,9 +11,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  
+
   product$ : Observable<Product[]>
-  imagePath = 'http://localhost:3000/'
+  imagePath = 'https://backends-adit.herokuapp.com/'
   firstIndex = 0
   lastIndex = 9
 
@@ -23,8 +23,8 @@ export class CategoryComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('_id')
    this.product$ = this.productService.getProductCategory(id)
   }
-  
-  addCart(product) {  
+
+  addCart(product) {
     this.cartService.addCart({
       product,
       quantity : 1
