@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl : 'http://localhost:3000/user',
-  baseUrlProduct : 'http://localhost:3000/admin',
+  baseUrl : 'https://backends-adit.herokuapp.com/user',
+  baseUrlProduct : 'https://backends-adit.herokuapp.com/admin',
 };
 
 /*
