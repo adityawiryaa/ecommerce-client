@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  imagePath : string
   product$ : Observable<Product[]>
   firstIndex = 0
   lastIndex = 9
@@ -21,7 +20,6 @@ export class ProductComponent implements OnInit {
   constructor(private productService : ProductService,private cartService : CartService) { }
   ngOnInit(): void {
    this.product$ = this.productService.getProduct()
-   this.imagePath = 'https://backends-adit.herokuapp.com/'
   }
   addCart(product) {
     this.cartService.addCart({

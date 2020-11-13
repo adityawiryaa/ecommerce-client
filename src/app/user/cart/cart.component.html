@@ -8,7 +8,7 @@
         <tr *ngFor="let item of product; ">
             <td>
                 <div class="productCart">
-                    <img src="{{imagePath +  item.product.image}}">
+                    <img src="{{item.product.image}}">
                     <div>
                         <h5 class="text-uppercase">{{item.product.name}}</h5>
                         <p>${{item.product.price}}</p>

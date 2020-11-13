@@ -13,7 +13,6 @@ import { Component, OnInit } from '@angular/core';
 export class CategoryComponent implements OnInit {
 
   product$ : Observable<Product[]>
-  imagePath = 'https://backends-adit.herokuapp.com/'
   firstIndex = 0
   lastIndex = 9
 

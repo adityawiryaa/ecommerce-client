@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
 export class ProductItemComponent implements OnInit {
   id : any;
   data :any;
-  imagePath : string;
 
   constructor(private route : ActivatedRoute, private productService : ProductService,private cartService : CartService) { }
 
@@ -21,7 +20,6 @@ export class ProductItemComponent implements OnInit {
   }
   getDetailProduct(){
     this.productService.getDetailProduct(this.id).subscribe(data => {
-    this.imagePath = 'https://backends-adit.herokuapp.com/'
       this.data = data.product
     })
   }

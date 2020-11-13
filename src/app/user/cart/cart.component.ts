@@ -13,7 +13,6 @@ import Swal from 'sweetalert2';
 })
 export class CartComponent implements OnInit {
   product$: Observable<ListCart[]>;
-  imagePath: string;
   total = 0;
   price: number;
   constructor(
@@ -30,7 +29,6 @@ export class CartComponent implements OnInit {
       }
     });
     this.product$ = this.cartService.getCart()
-    this.imagePath = 'https://backends-adit.herokuapp.com/';
   }
   deleteCart(id) {
     Swal.fire({

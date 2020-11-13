@@ -4,12 +4,12 @@
     <div class="carousel-inner" >
       <div class="carousel-item active">
           <div class="row">
-              <div *ngFor="let item of product$ | async | slice: 4 : 8 "class="col-3"><img class="d-block w-100" src="{{imagePath +  item.image}}" alt="First slide"></div>
+              <div *ngFor="let item of product$ | async | slice: 4 : 8 "class="col-3"><img class="d-block w-100" src="{{item.image}}" alt="First slide"></div>
           </div>
       </div>
       <div class="carousel-item">
           <div class="row">
-            <div *ngFor="let item of product$ | async | slice: 1 : 5 "class="col-3"><img class="d-block w-100" src="{{imagePath +  item.image}}" alt="First slide"></div>
+            <div *ngFor="let item of product$ | async | slice: 1 : 5 "class="col-3"><img class="d-block w-100" src="{{item.image}}" alt="First slide"></div>
           </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
          <div  class="card rounded shadow border-0">
              <div  class="card-body p-4">
                  <div class="zoomPicture mb-3">
-                    <img src="{{imagePath +  item.image}}" alt="{{item.name}}" class=" mx-auto card-img-top img-fluid">
+                    <img src="{{item.image}}" alt="{{item.name}}" class=" mx-auto card-img-top img-fluid">
                  </div>
                  <h5> <a [routerLink]="['/product/' + item._id]" class="text-dark text-uppercase">{{item.name}}</a></h5>
                  <p class="small text-muted font-italic">{{item.preview}}</p>
