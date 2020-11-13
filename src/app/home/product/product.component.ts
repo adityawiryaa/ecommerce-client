@@ -21,7 +21,7 @@ export class ProductComponent implements OnInit {
   constructor(private productService : ProductService,private cartService : CartService) { }
   ngOnInit(): void {
    this.product$ = this.productService.getProduct()
-   this.imagePath = 'http://localhost:3000/'
+   this.imagePath = 'https://backends-adit.herokuapp.com/'
   }
   addCart(product) {
     this.cartService.addCart({
