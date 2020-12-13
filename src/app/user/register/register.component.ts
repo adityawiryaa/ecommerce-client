@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
   user : any;
   signUpForm : FormGroup;
-  constructor( public fb : FormBuilder,public userService : UserService) { 
+  constructor( public fb : FormBuilder,public userService : UserService) {
     this.signUpForm = this.fb.group({
       email : [''],
       password : [''],

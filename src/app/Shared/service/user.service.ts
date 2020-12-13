@@ -14,7 +14,7 @@ import Swal from 'sweetalert2'
 })
 export class UserService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  
+
   constructor(private http: HttpClient, private router: Router) {}
 
   signUp(user : User) {
@@ -40,9 +40,9 @@ export class UserService {
     return this.http.post<any>(`${environment.baseUrl}/signin`, user).subscribe((res: any) => {
         localStorage.setItem('token', res.token);
         this.getUser().subscribe((res: any) => {
-          Swal.fire('Welcome','Login Success','success').then(result => {location.reload()})
+          Swal.fire({icon: 'success',title: 'Login Success',showConfirmButton: false,
+          timer: 1500}).then(result => {location.reload()})
         });
-          this.router.navigate(['profile/detail']);
       },
       err => {
         Swal.fire('Sorry',err.error.message,'error')
@@ -51,13 +51,12 @@ export class UserService {
   updateUser(user : UpdateUser) :  Observable<any>  {
     return this.http.put<any>(`${environment.baseUrl}/update`,user).pipe(map(result =>  true))
   }
-
   logout() {
     let clearToken = localStorage.removeItem('token');
     if (clearToken == null){
       this.router.navigate(['']);
       Swal.fire('See you again','Logout Success','info').then(result => {location.reload()})
-    } 
+    }
   }
 
   getToken() {
@@ -83,7 +82,7 @@ export class UserService {
   }
   handleError(error: HttpErrorResponse) {
     let message = '';
-    if (error.error instanceof ErrorEvent) message = error.error.message; 
+    if (error.error instanceof ErrorEvent) message = error.error.message;
     else message = `Error code : ${error.status} \n Message Error : ${error.message}`
     return throwError(message);
   }
